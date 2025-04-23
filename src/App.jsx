@@ -3,13 +3,12 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      Hello World
-    </>
+    <div>
+      {sayHello}
+    </div>
   )
 }
+const sayHello = () => {return "Hello"}
 
 export default App
