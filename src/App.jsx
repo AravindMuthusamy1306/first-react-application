@@ -5,15 +5,18 @@ import './App.css'
 function App() {
   return (
     <div>
-      <Profile name ="Aravind" age={21} />
+      <Job salary = {20000} position = "Software Engineer" company = "Accenture" />
+      <Job salary = {30000} position = "Data Analyst" company = "GuideHouse" />
+      <Job salary = {15000} position = "Customer Care Executive" company = "AGS Health" />
     </div>
   );
 }
-function Profile (props){
+function Job (props){
   return(
     <div>
-      <h1>{props.name}</h1>
-      <h2>{props.age}</h2>
+      <h1>{props.salary}</h1>
+      <h1>{props.position}</h1>
+      <h1>{props.company}</h1>
     </div>
   );
 } 
