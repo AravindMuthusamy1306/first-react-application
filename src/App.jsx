@@ -3,23 +3,25 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
+  const planets = [
+    {name : "Mars", isGasPlanet : false},
+    {name : "Earth", isGasPlanet : false},
+    {name : "Jupiter", isGasPlanet : true},
+    {name : "Venus", isGasPlanet : false},
+    {name : "Neptune", isGasPlanet : true},
+    {name : "Uranus", isGasPlanet : true}
+  ]
   return (
     <div>
-      <Job salary = {20000} position = "Software Engineer" company = "Accenture" />
-      <Job salary = {30000} position = "Data Analyst" company = "GuideHouse" />
-      <Job salary = {15000} position = "Customer Care Executive" company = "AGS Health" />
+      {
+        planets
+          .filter((planet) => planet.isGasPlanet)
+          .map((planet, key) =>{
+          return <h1 key = {key}> {planet.name} </h1>;
+        })
+      } 
     </div>
   );
+
 }
-function Job (props){
-  return(
-    <div>
-      <h1>{props.salary}</h1>
-      <h1>{props.position}</h1>
-      <h1>{props.company}</h1>
-    </div>
-  );
-} 
-
-
 export default App
